@@ -1,0 +1,248 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection.Emit;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Sevcan
+{
+
+    //1 ci sual
+    /*  using System;
+      using System.Collections.Generic;
+
+class Program
+  {
+      static void Main()
+      {
+          Dictionary<int, string> students = new Dictionary<int, string>();
+
+          students.Add(1, "Ali");
+          students.Add(2, "Aysel");
+          students.Add(3, "Murad");
+          students.Add(4, "Leyla");
+          students.Add(5, "Kamran");
+
+          int choice = 0;
+
+          while (choice != 4)
+          {
+              Console.WriteLine("\nStudent Registration System");
+              Console.WriteLine("1. Add student");
+              Console.WriteLine("2. Search student by ID");
+              Console.WriteLine("3. Show all students");
+              Console.WriteLine("4. Exit");
+              Console.Write("Enter your choice: ");
+
+              choice = Convert.ToInt32(Console.ReadLine());
+
+              switch (choice)
+              {
+                  case 1:
+                      Console.Write("Enter student ID: ");
+                      int id = Convert.ToInt32(Console.ReadLine());
+
+                      Console.Write("Enter student name: ");
+                      string name = Console.ReadLine();
+
+                      if (!students.ContainsKey(id))
+                      {
+                          students.Add(id, name);
+                          Console.WriteLine("Student added.");
+                      }
+                      else
+                      {
+                          Console.WriteLine("This ID already exists.");
+                      }
+                      break;
+
+                  case 2:
+                      Console.Write("Enter student ID: ");
+                      int searchId = Convert.ToInt32(Console.ReadLine());
+
+                      if (students.TryGetValue(searchId, out string studentName))
+                      {
+                          Console.WriteLine("Student: " + studentName);
+                      }
+                      else
+                      {
+                          Console.WriteLine("Student not found.");
+                      }
+                      break;
+
+                  case 3:
+                      foreach (var student in students)
+                      {
+                          Console.WriteLine(student.Key + " - " + student.Value);
+                      }
+                      break;
+
+                  case 4:
+                      Console.WriteLine("Program finished.");
+                      break;
+
+                  default:
+                      Console.WriteLine("Wrong choice.");
+                      break;
+              }
+          }
+      }
+  }
+
+*/
+
+
+    //2 ci sual
+    /* using System;
+
+class Program
+ {
+     static void Main()
+     {
+         Console.WriteLine("Geometric Calculator");
+         Console.WriteLine("1. Circle");
+         Console.WriteLine("2. Rectangle");
+         Console.WriteLine("3. Triangle");
+         Console.Write("Choose a shape: ");
+
+         int choice = Convert.ToInt32(Console.ReadLine());
+
+         switch (choice)
+         {
+             case 1:
+                 Console.Write("Enter radius: ");
+                 double radius = Convert.ToDouble(Console.ReadLine());
+
+                 double circleArea = Math.PI * Math.Pow(radius, 2);
+
+                 Console.WriteLine("Area: " + Math.Round(circleArea, 2));
+                 break;
+
+             case 2:
+                 Console.Write("Enter width: ");
+                 double width = Convert.ToDouble(Console.ReadLine());
+
+                 Console.Write("Enter height: ");
+                 double height = Convert.ToDouble(Console.ReadLine());
+
+                 double rectangleArea = width * height;
+
+                 Console.WriteLine("Area: " + Math.Round(rectangleArea, 2));
+                 break;
+
+             case 3:
+                 Console.Write("Enter first side: ");
+                 double a = Convert.ToDouble(Console.ReadLine());
+
+                 Console.Write("Enter second side: ");
+                 double b = Convert.ToDouble(Console.ReadLine());
+
+                 Console.Write("Enter third side: ");
+                 double c = Convert.ToDouble(Console.ReadLine());
+
+                 double s = (a + b + c) / 2;
+
+                 double triangleArea = Math.Sqrt(s * (s - a) * (s - b) * (s - c));
+
+                 Console.WriteLine("Area: " + Math.Round(triangleArea, 2));
+                 break;
+
+             default:
+                 Console.WriteLine("Wrong choice.");
+                 break;
+         }
+     }
+ }
+
+ */
+
+
+    //sual 3
+    /*
+    using System;
+    using System.Collections.Generic;
+
+    class Program
+    {
+        static void Main()
+        {
+            List<int> numbers = new List<int>();
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write("Enter number " + (i + 1) + ": ");
+                int number = Convert.ToInt32(Console.ReadLine());
+
+                numbers.Add(number);
+            }
+
+            int max = numbers[0];
+            int min = numbers[0];
+
+            int evenCount = 0;
+            int oddCount = 0;
+
+            foreach (int number in numbers)
+            {
+                max = Math.Max(max, number);
+                min = Math.Min(min, number);
+
+                if (number % 2 == 0)
+                {
+                    evenCount++;
+                }
+                else
+                {
+                    oddCount++;
+                }
+            }
+
+            Console.WriteLine("\nLargest number: " + max);
+            Console.WriteLine("Smallest number: " + min);
+            Console.WriteLine("Even numbers: " + evenCount);
+            Console.WriteLine("Odd numbers: " + oddCount);
+        }
+    }
+*/
+
+
+    //4 cu sual
+    /*
+    using System;
+
+    class Program
+    {
+        static void Main()
+        {
+            Random random = new Random();
+
+            int secretNumber = random.Next(0, 101);
+            int guess;
+
+            do
+            {
+                Console.Write("Guess the number (0-100): ");
+                guess = Convert.ToInt32(Console.ReadLine());
+
+                if (guess > secretNumber)
+                {
+                    Console.WriteLine("Try a smaller number.");
+                }
+                else if (guess < secretNumber)
+                {
+                    Console.WriteLine("Try a bigger number.");
+                }
+                else
+                {
+                    Console.WriteLine("Congratulations!");
+                }
+
+            } while (guess != secretNumber);
+        }
+    }
+    */
+
+
+}
